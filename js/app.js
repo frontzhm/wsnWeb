@@ -1,10 +1,40 @@
 $(function() {
-	// 轮播图的图li
-	
+    // 轮播图的图li和小索引li循环生成
+    var creatCarHtml = function() {
+        var picItemHtml = '';
+        var indexItemHtml = '';
+        var picItem =
+            '<li class="carPicItem">' +
+            '<div class="picItemWrap">' +
+            '<img src="img/1.jpg" alt="">' +
+            '</div>' +
+            '</li>';
+        var indexItem =
+            '<li class="carItemIndex">' +
+            '<span class="circle"></span>' +
+            '</li>';
+        for (var i = 0; i < 3; i++) {
+            picItemHtml += picItem;
+            indexItemHtml += indexItem;
+        }
+        $('.carPicList ul').html(picItemHtml);
+        $('.carIndexlist ol').html(indexItemHtml);
+        var jpgs = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg'];
+        $.each($('.picItemWrap img'), function(index, imgObj) {
+            // 每个img的src是jpgs相对应的值
+            imgObj.src = jpgs[index];
+            console.log(imgObj.src)
+        })
+        $('.carPicItem').eq(0).addClass('cur');
+        $('.carItemIndex').eq(0).addClass('cur');
+
+    };
+    creatCarHtml();
 
 
 
-
+    // 轮播
+    
     var picIndex = 0;
     var circleIndex = 0;
     var carNum = $('.carPicItem').length;
@@ -25,9 +55,9 @@ $(function() {
             if (oprator == '+') {
                 picIndex = (picIndex + 1) % carNum;
                 circleIndex = (circleIndex + 1) % carNum;
-            }else{
-            	picIndex = (picIndex - 1) % carNum;
-            	circleIndex = (circleIndex - 1) % carNum;
+            } else {
+                picIndex = (picIndex - 1) % carNum;
+                circleIndex = (circleIndex - 1) % carNum;
             }
             $(picItemClassSelector).eq(picIndex).stop().fadeIn().addClass('cur');
             $(littleItemClassSelector).eq(circleIndex).addClass('cur');
