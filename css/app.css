@@ -5,7 +5,7 @@
 body {
     line-height: 1.4;
     color: #333;
-    font-family: 'Microsoft Yahei',Tahoma, arial;
+    font-family: 'Microsoft Yahei', Tahoma, arial;
     font-size: 14px;
 }
 
@@ -80,6 +80,7 @@ a {
 .bgf {
     background-color: #fff;
 }
+
 
 /* safe color */
 
@@ -170,7 +171,6 @@ a {
 }
 
 
-
 /* text-align */
 
 .tc {
@@ -185,7 +185,6 @@ a {
     text-align: left;
 }
 
-
 .fl {
     float: left;
 }
@@ -193,8 +192,6 @@ a {
 .fr {
     float: right;
 }
-
-
 
 .rel {
     position: relative;
@@ -204,11 +201,10 @@ a {
     position: absolute;
 }
 
-
-
 .ovh {
     overflow: hidden;
 }
+
 
 /*
 *   所有网站的通用样式结束
@@ -228,23 +224,29 @@ body {
 .mt50 {
     margin-top: 50px;
 }
-.mt100{
+
+.mt100 {
     margin-top: 100px;
 }
-.mt200{
+
+.mt200 {
     margin-top: 200px;
 }
-.w100p{
+
+.w100p {
     width: 100%;
 }
-.w880a{
+
+.w880a {
     width: 880px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
-.lh60{
+
+.lh60 {
     line-height: 60px;
 }
+
 
 /*
 *   项目网站的样式库结束
@@ -255,6 +257,7 @@ body {
 *   项目网站的组件库开始
 */
 
+
 /*导航栏开始*/
 
 .commonNav {
@@ -263,9 +266,11 @@ body {
     font-size: 0;
 }
 
+
 /*
     导航栏中间的宽80,其他四个宽200,880
  */
+
 
 /*
     display:inline-block;
@@ -299,59 +304,156 @@ body {
     letter-spacing: 3px;
 }
 
-
-.circleItem{
+.circleItem {
     width: 80px;
 }
+
+
 /*导航主题*/
+
 nav.whiteTheme a {
     color: #fff;
 }
-nav.grayTheme a{
-    color:#666;
+
+nav.grayTheme a {
+    color: #666;
 }
-.grayTheme .navItem.cur a{
-    color:#000;
-    font-weight:bold;
+
+.grayTheme .navItem.cur a {
+    color: #000;
+    font-weight: bold;
 }
-nav.whiteTheme .circleLink{
+
+nav.whiteTheme .circleLink {
     background-color: #fff;
-    color:#333;
+    color: #333;
 }
-nav.grayTheme .circleLink{
+
+nav.grayTheme .circleLink {
     background-color: #000;
-    color:#fff;
+    color: #fff;
 }
+
 nav.whiteTheme .navItem:nth-of-type(1) {
-    border-right: 1px solid rgba(255,255,255,.5);
+    border-right: 1px solid rgba(255, 255, 255, .5);
 }
+
 nav.whiteTheme .navItem:nth-last-of-type(1) {
-    border-left: 1px solid rgba(255,255,255,.5);
+    border-left: 1px solid rgba(255, 255, 255, .5);
 }
-nav.grayTheme  .navItem:nth-of-type(1){
-    border-right: 1px solid rgba(0,0,0,.5);
+
+nav.grayTheme .navItem:nth-of-type(1) {
+    border-right: 1px solid rgba(0, 0, 0, .5);
 }
+
 nav.grayTheme .navItem:nth-last-of-type(1) {
-    border-left: 1px solid rgba(0,0,0,.5);
+    border-left: 1px solid rgba(0, 0, 0, .5);
 }
+
+
 /*导航栏结束*/
-/*底部*/
-.abFoot{
+
+
+/*轮播图开始*/
+
+.carouselWrap {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.carPicList {
+    position: relative;
+    height: 400px;
+}
+
+.carPicList>ul,
+.carPicItem,
+.picItemWrap,
+.carPicItem img {
+    height: 100%;
+}
+
+.carPicItem {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    display: none;
+}
+.carPicItem.cur{
+    display: block;
+}
+.picItemWrap {
+    text-align: center;
+}
+
+.leftArr,
+.rightArr {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 50px;
+    color: #666;
+    cursor: pointer;
+}
+
+.leftArr {
+    left: -50px;
+}
+
+.rightArr {
+    right: -50px;
+}
+
+.carIndexlist {
+    margin-top: 20px;
+    font-size: 0px;
+}
+
+.carItemIndex {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    /*TODO*/
+    width: 50px;
+}
+
+.carItemIndex .circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    /*TODO*/
+    background-color: #999  ;
+    cursor:pointer;
+}
+.carItemIndex.cur .circle{
+    background-color: #69f;
+}
+
+/*轮播图结束*/
+
+
+/*底部*/  
+
+.abFoot {
     width: 100%;
     position: absolute;
     left: 0;
     bottom: 30px;
 }
+
+
 /*
 *   项目网站的组件库结束
 */
 
 
-
-
 /*
 *   不同页面的特定样式开始
 */
+
 .indexSection {
     width: 100%;
     height: 100%;
@@ -375,24 +477,29 @@ nav.grayTheme .navItem:nth-last-of-type(1) {
     font-size: 16px;
 }
 
+
 /*歌列表开始*/
-.songListPage{
-    color:#000;
+
+.songListPage {
+    color: #000;
 }
-.songListItem{
+
+.songListItem {
     width: 33.333%;
     display: inline-block;
     vertical-align: middle;
-
-
 }
-.songListItem a{
+
+.songListItem a {
     display: block;
     font-size: 16px;
-    color:#000;
+    color: #000;
     line-height: 100px;
 }
+
+
 /*歌列表结束*/
+
 
 /*
 *   不同页面的特定样式结束

@@ -6,6 +6,8 @@
     <title>Document</title>
     <link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/app.js"></script>
 </head>
 
 <body>
@@ -48,12 +50,52 @@
             </nav>
         </header>
         <div class="mt100">
-            
+            <div class="carouselWrap">
+                <div class="carPicList">
+                    <ul>
+                        <li class="carPicItem cur">
+                            <div class="picItemWrap">
+                                <img src="img/1.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="carPicItem">
+                            <div class="picItemWrap">
+                                <img src="img/2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="carPicItem">
+                            <div class="picItemWrap">
+                                <img src="img/3.jpg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="carArrs">
+                        <span class="leftArr">
+                            <i class="fa fa-angle-left" title="点击查看上一张"></i>
+                        </span>
+                        <span class="rightArr">
+                            <i class="fa fa-angle-right" title="点击查看下一张"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="carIndexlist">
+                    <ol>
+                        <li class="carItemIndex cur">
+                            <span class="circle"></span>
+                        </li>
+                        <li class="carItemIndex">
+                            <span class="circle"></span>
+                        </li>
+                        <li class="carItemIndex">
+                            <span class="circle"></span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </div>
-        
         <footer>
             <div class="tc lh60">
-                Copyright © 2015 Anna Patio. All Rights Reserved. 
+                Copyright © 2015 Anna Patio. All Rights Reserved.
             </div>
         </footer>
     </section>
