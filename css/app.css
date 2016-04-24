@@ -357,7 +357,7 @@ nav.grayTheme .navItem:nth-last-of-type(1) {
 /*轮播图开始*/
 
 .carouselWrap {
-    width: 500px;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -368,11 +368,19 @@ nav.grayTheme .navItem:nth-last-of-type(1) {
 
 .carPicList>ul,
 .carPicItem,
-.picItemWrap,
-.carPicItem img {
+.picItemWrap{
     height: 100%;
 }
-
+/*.carPicItem img {
+    width: 100%;
+}*/
+.carPicItem .picbg{
+    width: 100%;
+    height: 400px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 .carPicItem {
     position: absolute;
     width: 100%;
@@ -410,13 +418,16 @@ nav.grayTheme .navItem:nth-last-of-type(1) {
     margin-top: 20px;
     font-size: 0px;
 }
-
+.carIndexlist ol{
+    text-align:center;
+}
 .carItemIndex {
     text-align: center;
     display: inline-block;
     vertical-align: top;
     /*TODO*/
     width: 50px;
+    /*margin-left: 20px;*/
 }
 
 .carItemIndex .circle {
